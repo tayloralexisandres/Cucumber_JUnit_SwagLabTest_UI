@@ -1,7 +1,7 @@
 Feature: Etsy search functionality
   Agile story: User should be able to search any keyword
 
-@today
+@smoke
   Scenario: Etsy title verification
     Given user is on etsy home page
     Then user should see title is as expected
