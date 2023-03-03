@@ -17,7 +17,7 @@ Feature: Google Search functionality
     Then User should see title is apple – Google Search
 
 
-@datatable3
+
   Scenario: Google testing data table
     Then User should be able to search for following:
       | Java         |
