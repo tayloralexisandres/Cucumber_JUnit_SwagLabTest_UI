@@ -3,8 +3,8 @@ Feature: Dashboard functionality
   As an Event manager, I want to have access to different modules
 
 
-
-  Scenario: outline: Positive login scenario for Event Manager and verify they have access to 15 modules
+@tay
+  Scenario:Positive login scenario for Event Manager and verify they have access to 15 modules
     Given user is on the ERP app login page
     When user for events enters below correct credentials
 
