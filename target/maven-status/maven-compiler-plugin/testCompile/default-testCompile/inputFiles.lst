@@ -1,12 +1,12 @@
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\Library_stepDefinitions.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\WebTable_StepDefinitions.java
+C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\sat_step_def.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\WT_OrderPage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\WikiResultPage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\runners\FailedTestRunner.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\Hooks.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\WikiPage.java
-C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\CRMpage.java
-C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\US07step_definitions.java
+C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\CrmPage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\WT_BasePage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\bing_step_definitions.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\BingPage.java
@@ -17,10 +17,12 @@ C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\Etsy_step_definitions.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\GooglePage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\utilities\ConfigReader.java
+C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\ButtonBasePAge.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\utilities\Driver.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\Data_tables_step_definitions.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\EtsyPage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\google_stepDefinitions.java
+C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\US07_stepdef.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\step_definitions\wiki_step_definitions.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\DropdownsPage.java
 C:\Users\taylo\IdeaProjects\Cucumber_JUnit_Project\src\test\java\com\cydeo\pages\WT_LoginPage.java
