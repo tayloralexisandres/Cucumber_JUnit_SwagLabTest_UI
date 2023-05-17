@@ -44,7 +44,7 @@ public class Espn_stepDef {
     public void user_should_see_all_teams_in_alphabetical_order() {
 
 
-        List<WebElement> standings=  Driver.getDriver().findElements(By.xpath("//td[@class='team ']//span/following-sibling::a[2]"));
+        List<WebElement> standings=  Driver.getDriver().findElements(By.xpath("//div[@class=\"team-link flex items-center clr-gray-03\"]"));
 
         System.out.println(standings.size());
         List<String> teams=new ArrayList<>();
