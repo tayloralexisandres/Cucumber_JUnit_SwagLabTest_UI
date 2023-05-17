@@ -20,6 +20,8 @@ public class BrowserUtils {
     and execute Thread.sleep method for given duration
     Arg: int second
      */
+
+
     public static void sleep(int second){
         second *= 1000;
         try{
@@ -159,6 +161,7 @@ public class BrowserUtils {
         List<String> elemTexts = new ArrayList<>();
         for (WebElement el : list) {
             elemTexts.add(el.getText());
+
         }
         return elemTexts;
     }
