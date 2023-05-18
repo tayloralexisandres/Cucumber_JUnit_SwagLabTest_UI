@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>17 May 2023, 17:01</td>
+      <td>29 May 2023, 14:00</td>
     </tr>
   </tbody>
 </table>
@@ -127,19 +127,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">@ui</td>
-          <td      class="passed"    >4</td>
           <td >0</td>
           <td >0</td>
+          <td     class="skipped"   >8</td>
           <td >0</td>
           <td >0</td>
+          <td class="total">8</td>
+
+          <td >0</td>
+          <td  class="failed"    >4</td>
           <td class="total">4</td>
 
-          <td  class="passed"    >1</td>
-          <td >0</td>
-          <td class="total">1</td>
-
-          <td class="duration" data-value="23829644500">23.829</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="1998600">0.001</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -171,25 +171,27 @@ $(document).ready(function() {
 <div class="element">
     <div class="indention">
       <b>Feature:</b>
-      <a href="report-feature_2420451464.html">Navigate to espn.com</a>
+      <a href="report-feature_2941394583.html">Login Functionality</a>
     </div>
 
 
 <div class="tags indention">
     <b>Tags:</b>
-       <a href="report-tag_2209711979.html">@espn</a>
+       <a href="report-tag_2210132425.html">@swag</a>
        <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_4091721659.html">@valid</a>
+       <a href="report-tag_4091721659.html">@valid</a>
 </div>
 
 
-  <span class="lead-duration duration">23.829</span>
+  <span class="lead-duration duration">0.000</span>
 
 
-  <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario</span>
-  <span class="name">Lets go baby</span>
+  <span class="name">Login as Standard User</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -198,48 +200,16 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
 
 
-  <div class="inner-level hooks-element-before">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#before-2">
-
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-    </div>
-
-    <div id="before-2" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">Before</span>
-              <span class="location name">com.cydeo.step_definitions.Hooks.setupMethod1()</span>
-
-  <span class="lead-duration duration">4.994</span>
-
-          </div>
-
-
-
-
-
-
-
-        </div>
-    </div>
-  </div>
 
 
 
 <div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-3">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
 
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
@@ -249,13 +219,13 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-3" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">user is on the website</span>
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">: Standard User enters username and password</span>
 
   <span class="lead-duration duration">0.000</span>
 
@@ -280,65 +250,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-When passed">
-  <span class="keyword indention">When</span>
-  <span class="name">user hoovers over NFL</span>
-
-  <span class="lead-duration duration">3.235</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">user navigates to standings</span>
-
-  <span class="lead-duration duration">10.554</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-Then passed">
+<div class="brief step-name-Then skipped">
   <span class="keyword indention">Then</span>
-  <span class="name">user should see all teams in alphabetical order</span>
+  <span class="name">: User should be logged in to Home page and log out</span>
 
-  <span class="lead-duration duration">10.039</span>
+  <span class="lead-duration duration">0.000</span>
 
 </div>
 
@@ -364,44 +280,73 @@ $(document).ready(function() {
 
 
 
-  <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-4">
 
-<div class="brief passed">
-  <span class="keyword indention">Hooks</span>
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2941394583.html">Login Functionality</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2210132425.html">@swag</a>
+       <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_4091721659.html">@valid</a>
+       <a href="report-tag_1708653150.html">@problem</a>
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Login as Problem User</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-3" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
   <span class="name"></span>
 
 
      <i class="chevron fa fa-fw"></i>
 </div>
 
-    </div>
+  </div>
 
-    <div id="after-4" class="inner-level collapse collapsable-details ">
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.cydeo.step_definitions.Hooks.tearDownMethod(io.cucumber.java.Scenario)</span>
-
-  <span class="lead-duration duration">0.757</span>
-
-          </div>
+  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
 
 
-
-
-
-
-
-        </div>
-        <div class="hook">
-          <div class="brief passed">
-            <span class="keyword indention">After</span>
-              <span class="location name">com.cydeo.step_definitions.Hooks.tearDown()</span>
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">:Problem User enters username and password</span>
 
   <span class="lead-duration duration">0.000</span>
 
-          </div>
+</div>
 
 
 
@@ -409,9 +354,283 @@ $(document).ready(function() {
 
 
 
-        </div>
-    </div>
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">:User sees wrong image</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
   </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2941394583.html">Login Functionality</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2210132425.html">@swag</a>
+       <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_4091721659.html">@valid</a>
+       <a href="report-tag_1869962612.html">@glitch</a>
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-5">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Login as Performance glitch User</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-5" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-6">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-6" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">:Glitch User enters username and password</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">: User should wait for five seconds to launch to Home page</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
+
+  </div>
+</div>
+
+
+<div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_2941394583.html">Login Functionality</a>
+    </div>
+
+
+<div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_2210132425.html">@swag</a>
+       <a href="report-tag_2147548883.html">@ui</a>
+       <a href="report-tag_4091721659.html">@valid</a>
+       <a href="report-tag_1530621891.html">@lockedout</a>
+</div>
+
+
+  <span class="lead-duration duration">0.000</span>
+
+
+  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-7">
+
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Login as LockedOut User</span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-7" class="collapse collapsable-details  in ">
+
+
+
+
+
+<div class="steps inner-level">
+  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-8">
+
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+
+
+     <i class="chevron fa fa-fw"></i>
+</div>
+
+  </div>
+
+  <div id="steps-8" class="inner-level collapse collapsable-details  in ">
+      <div class="step">
+
+
+<div class="brief step-name-When skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">:User enters invalid credentials</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">:User should see error message</span>
+
+  <span class="lead-duration duration">0.000</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+
+
 
   </div>
 </div>
