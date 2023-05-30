@@ -1,7 +1,7 @@
 package com.swag.stepDefinitions;
 
-import com.swag.pages.SwagLoginlogin;
-import com.swag.pages.SwagProductlogin;
+import com.swag.pages.SwagLoginPage;
+import com.swag.pages.SwagProductPage;
 import com.swag.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,8 +13,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class SwagLoginStep_Def {
-    SwagLoginlogin login=new SwagLoginlogin();
-    SwagProductlogin product=new SwagProductlogin();
+    SwagLoginPage login=new SwagLoginPage();
+    SwagProductPage product=new SwagProductPage();
     String actualTitle;
     @Given(":User is on the login login")
     public void user_is_on_the_login_login() {

@@ -7,9 +7,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class SwagLoginlogin {
+public class SwagLoginPage {
 
-    public SwagLoginlogin() {
+    public SwagLoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
