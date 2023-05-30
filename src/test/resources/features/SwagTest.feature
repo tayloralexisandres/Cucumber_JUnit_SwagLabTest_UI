@@ -14,27 +14,27 @@ Feature: Login Functionality
 
   @valid
   Scenario: Login as Standard User
-    When User enters valid password and username "standard_user"
-    Then User should see "Products" displayed on Products login
+    When User enters valid password and username "standard_user" and clicks login
+    Then User should see "Products" displayed on Products page
 
   @lockedUser
   Scenario: Login as locked out user
-    When User enters valid password and username "locked_out_user"
+    When User enters valid password and username "locked_out_user" and clicks login
     Then "Epic sadface: Sorry, this user has been locked out." should be displayed
 
   @problemUser
   Scenario: Login as Problem User
-    When User enters valid password and username "problem_user"
+    When User enters valid password and username "problem_user" and clicks login
     Then User should not be able to add Sauce Labs Fleece Jacket
 
   @GlitchUser
   Scenario: Login as Performance glitch User
-    When User enters valid password and username "performance_glitch_user"
-    Then User should wait for five seconds to launch to Product login
+    When User enters valid password and username "performance_glitch_user" and clicks login
+    Then User should wait for five seconds to launch to Product page
 
   @unsuccess
   Scenario: Login with invalid credentials
-    When User enters invalid password and username "incorrectUsername"
+    When User enters invalid password and username "incorrectUsername" and clicks login
     Then Error message should be displayed
 
   @emptyFields
@@ -61,8 +61,8 @@ Feature: Login Functionality
 
   @multipleUsers
   Scenario Outline: Validate all successful logins
-    When User enters valid userName "<username>"
-    And User should see "Products" displayed on Products login
+    When User enters valid password and userName "<username>" and clicks login
+    And User should see "Products" displayed on Products page
     Then User logs out
 
 

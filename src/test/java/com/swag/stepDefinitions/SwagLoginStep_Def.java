@@ -23,17 +23,18 @@ public class SwagLoginStep_Def {
 
     //____________________VALID USER STEPS
 
-    @When("User enters valid password and username {string}")
-    public void userEntersValidPasswordAndUsername(String username) {
-        login.userLogin(username);
+    @When("User enters valid password and username {string} and clicks login")
+    public void userEntersValidPasswordAndUsernameAndClicksLogin(String validuser) {
+        login.userLogin(validuser);
     }
 
     //_____________________________PRODUCTS TITLE TRUE ON PRODUCT login
-    @Then("User should see {string} displayed on Products login")
-    public void user_should_see_displayed_on_products_login(String products) {
+    @Then("User should see {string} displayed on Products page")
+    public void userShouldSeeDisplayedOnProductsPage(String products) {
         actualTitle=product.productsTitle.getText();
         Assert.assertEquals(products,actualTitle);
     }
+
 
     //_________________LOCKED OUT USER STEPS
 
@@ -51,16 +52,16 @@ public class SwagLoginStep_Def {
     }
     //_______________________GLITCH USER STEPS
 
-    @Then("User should wait for five seconds to launch to Product login")
-    public void user_should_wait_for_five_seconds_to_launch_to_product_login() {
+    @Then("User should wait for five seconds to launch to Product page")
+    public void user_should_wait_for_five_seconds_to_launch_to_product_page() {
         WebDriverWait wait= new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(product.productsTitle));
         Assert.assertEquals("Products",product.productsTitle.getText());
     }
 
 //_________________________INVALID CREDENTIALS STEPS
-@When("User enters invalid password and username {string}")
-public void userEntersInvalidPasswordAndUsername(String invalid) {
+@When("User enters invalid password and username {string} and clicks login")
+public void userEntersInvalidPasswordAndUsernameAndClicksLogin(String invalid) {
         login.userLogin(invalid);
 }
     @Then("Error message should be displayed")
@@ -89,8 +90,8 @@ public void userEntersInvalidPasswordAndUsername(String invalid) {
 
     //__________________________EMPTY USER FIELD STEPS
     @When("User enters valid password {string}")
-    public void user_enters_valid_password(String passwaord) {
-        login.password.sendKeys(passwaord);
+    public void user_enters_valid_password(String password) {
+        login.password.sendKeys(password);
     }
 
     //___________________________EMPTY PASSWORD FIELD STEPS
@@ -102,11 +103,10 @@ public void userEntersInvalidPasswordAndUsername(String invalid) {
 
     //_______________________DDT OUTLINE MULTIPLE LOGIN
 
-    @When("User enters valid userName {string}")
-    public void user_enters_valid_user_name(String validUSer) {
-        login.userLogin(validUSer);
+    @When("User enters valid password and userName {string} and clicks login")
+    public void userEntersValidPasswordAndUserNameAndClicksLogin(String valid) {
+        login.userLogin(valid);
     }
-
 
     @Then("User logs out")
     public void userLogsOut() {
