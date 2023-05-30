@@ -63,7 +63,7 @@ public class BrowserUtils {
 
     /*
     This method accepts WebElement target,
-    and waits for that WebElement not to be displayed on the page
+    and waits for that WebElement not to be displayed on the login
      */
     public static void waitForInvisibilityOf(WebElement target){
         //Create the object of 'WebDriverWait' class, and set up the constructor args
@@ -197,7 +197,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for the provided element to be visible on the page
+     * Waits for the provided element to be visible on the login
      *
      * @param element
      * @param time
@@ -209,7 +209,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Waits for element matching the locator to be visible on the page
+     * Waits for element matching the locator to be visible on the login
      *
      * @param locator
      * @param time
@@ -249,7 +249,7 @@ public class BrowserUtils {
      *
      * @param time
      */
-    public static void waitForPageToLoad(long time) {
+    public static void waitForloginToLoad(long time) {
         ExpectedCondition<Boolean> expectation = new ExpectedCondition<Boolean>() {
             public Boolean apply(WebDriver driver) {
                 return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");
@@ -264,7 +264,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Verifies whether the element matching the provided locator is displayed on page
+     * Verifies whether the element matching the provided locator is displayed on login
      *
      * @param by
      * @throws AssertionError if the element matching the provided locator is not found or not displayed
@@ -280,7 +280,7 @@ public class BrowserUtils {
     }
 
     /**
-     * Verifies whether the element matching the provided locator is NOT displayed on page
+     * Verifies whether the element matching the provided locator is NOT displayed on login
      *
      * @param by
      * @throws AssertionError the element matching the provided locator is displayed
@@ -296,7 +296,7 @@ public class BrowserUtils {
 
 
     /**
-     * Verifies whether the element is displayed on page
+     * Verifies whether the element is displayed on login
      *
      * @param element
      * @throws AssertionError if the element is not found or not displayed
@@ -480,7 +480,7 @@ public class BrowserUtils {
     }
 
     /**
-     *  checks that an element is present on the DOM of a page. This does not
+     *  checks that an element is present on the DOM of a login. This does not
      *    * necessarily mean that the element is visible.
      * @param by
      * @param time

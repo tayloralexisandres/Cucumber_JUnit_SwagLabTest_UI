@@ -1,15 +1,14 @@
-package swag.pages;
+package swag.logins;
 
-import net.bytebuddy.dynamic.scaffold.TypeWriter;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.loginFactory;
 import swag.utilities.Driver;
 
-public class SwagHomePage {
+public class SwagProductlogin {
 
-    public SwagHomePage() {
-        PageFactory.initElements(Driver.getDriver(), this);
+    public SwagProductlogin() {
+        loginFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//div[@id='shopping_cart_container']")

@@ -1,15 +1,15 @@
-package swag.pages;
+package swag.logins;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.loginFactory;
 import swag.utilities.Driver;
 
-public class SwagLoginPage {
+public class SwagLoginlogin {
 
-    public SwagLoginPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+    public SwagLoginlogin() {
+        loginFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//input[@id='user-name']")
@@ -22,7 +22,7 @@ public class SwagLoginPage {
     @FindBy(xpath = "//h3[@data-test='error']")
     public WebElement error;
 
-    public void login(String user, String pass){
+    public void login(String user, String pass) {
         this.username.sendKeys(user);
         this.password.sendKeys(pass);
         this.loginButton.click();
@@ -30,19 +30,19 @@ public class SwagLoginPage {
 
     }
 
-    public void errorMessage(String message){
-        String expected=message;
-        String actual=error.getText();
+    public void errorMessage(String message) {
+        String expected = message;
+        String actual = error.getText();
 
-        Assert.assertEquals(expected,actual);
+        Assert.assertEquals(expected, actual);
     }
 
 
-    public void userLogin(String username){
-        String usertype= username;
+    public void userLogin(String username) {
+        String usertype = username;
         String password = "secret_sauce";
 
-        switch (usertype){
+        switch (usertype) {
             case "standard_user":
                 this.username.sendKeys(username);
                 this.password.sendKeys(password);
@@ -68,10 +68,6 @@ public class SwagLoginPage {
                 this.password.sendKeys("incorrectUsername");
                 this.loginButton.click();
                 break;
-
-
-
-
 
 
         }

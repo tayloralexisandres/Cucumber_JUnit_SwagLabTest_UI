@@ -1,123 +1,118 @@
 package swag.stepDefinitions;
 
-import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import swag.pages.SwagHomePage;
-import swag.pages.SwagLoginPage;
+import swag.logins.SwagProductlogin;
+import swag.logins.SwagLoginlogin;
 import swag.utilities.Driver;
 
 import java.time.Duration;
 
 public class SwagLoginStep_Def {
-    SwagLoginPage page=new SwagLoginPage();
-    SwagHomePage home=new SwagHomePage();
+    SwagLoginlogin login=new SwagLoginlogin();
+    SwagProductlogin product=new SwagProductlogin();
     String actualTitle;
-    @Given(":User is on the login page")
-    public void user_is_on_the_login_page() {
+    @Given(":User is on the login login")
+    public void user_is_on_the_login_login() {
         Driver.getDriver().get("https://www.saucedemo.com/");
     }
-    @When("User enters valid username {string}")
-    public void user_enters_valid_username(String valid) {
 
-        page.userLogin(valid);
+    //____________________VALID USER STEPS
 
+    @When("User enters valid password and username {string}")
+    public void userEntersValidPasswordAndUsername(String username) {
+        login.userLogin(username);
     }
-    @When("User enters valid password {string}")
-    public void user_enters_valid_password(String password) {
-        page.password.sendKeys(password);
 
+    //_____________________________PRODUCTS TITLE TRUE ON PRODUCT login
+    @Then("User should see {string} displayed on Products login")
+    public void user_should_see_displayed_on_products_login(String products) {
+        actualTitle=product.productsTitle.getText();
+        Assert.assertEquals(products,actualTitle);
+    }
+
+    //_________________LOCKED OUT USER STEPS
+
+    @Then("{string} should be displayed")
+    public void should_be_displayed(String message) {
+        login.errorMessage(message);
+    }
+
+    //____________________PROBLEM USER STEPS
+
+    @Then("User should not be able to add Sauce Labs Fleece Jacket")
+    public void user_should_not_be_able_to_add_sauce_labs_fleece_jacket() {
+        boolean isDisabled=!product.fleeceAdd.isEnabled();
+        Assert.assertEquals(false,isDisabled);
+    }
+    //_______________________GLITCH USER STEPS
+
+    @Then("User should wait for five seconds to launch to Product login")
+    public void user_should_wait_for_five_seconds_to_launch_to_product_login() {
+        WebDriverWait wait= new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(product.productsTitle));
+        Assert.assertEquals("Products",product.productsTitle.getText());
+    }
+
+//_________________________INVALID CREDENTIALS STEPS
+@When("User enters invalid password and username {string}")
+public void userEntersInvalidPasswordAndUsername(String invalid) {
+        login.userLogin(invalid);
+}
+    @Then("Error message should be displayed")
+    public void error_message_should_be_displayed() {
+        Assert.assertTrue(login.error.isDisplayed());
+    }
+
+ //____________________________EMPTY USER AND PASSWORD FIELDS STEPS
+ @When("User enters a blank username")
+ public void user_enters_a_blank_username() {
+    login.username.sendKeys("");
+ }
+    @When("User enters a blank password")
+    public void user_enters_a_blank_password() {
+        login.password.sendKeys("");
     }
     @When("User clicks on login button")
     public void user_clicks_on_login_button() {
-        page.loginButton.click();
+        login.loginButton.click();
     }
-    @Then("User should see {string} displayed on Products page")
-    public void user_should_see_displayed_on_products_page(String products) {
-         actualTitle=home.productsTitle.getText();
-         Assert.assertEquals(products,actualTitle);
-
-    }
-
-
-    @When("User enters locked out username {string}")
-    public void userEntersLockedOutUsername(String user) {
-      page.userLogin(user);
-    }
-
-    @Then("{string} should be displayed")
-    public void shouldBeDisplayed(String message) {
-        page.errorMessage(message);
-    }
-
-    @When("User enters problem username {string}")
-    public void userEntersProblemUsername(String user) {
-
-        page.userLogin(user);
-    }
-
-    @Then("User should not be able to add Sauce Labs Fleece Jacket")
-    public void userShouldNotBeAbleToAddSauceLabsFleeceJacket() {
-        boolean isDisabled=!home.fleeceAdd.isEnabled();
-        Assert.assertEquals(false,isDisabled);
-    }
-
-    @When("User enters username {string}")
-    public void userEntersUsername(String user) {
-      page.username.sendKeys(user);
-    }
-
-    @Then("User should wait for five seconds to launch to Product page")
-    public void userShouldWaitForFiveSecondsToLaunchToProductPage() {
-        WebDriverWait wait= new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(5));
-        wait.until(ExpectedConditions.visibilityOf(home.productsTitle));
-        Assert.assertEquals("Products",home.productsTitle.getText());
-    }
-
-    @When("User enters invalid username {string}")
-    public void userEntersInvalidUsername(String invalid) {
-        page.username.sendKeys(invalid);
-    }
-
-    @And("User enters invalid password {string}")
-    public void userEntersInvalidPassword(String invpass) {
-        page.password.sendKeys(invpass);
-    }
-
-    @Then("Error message should be displayed")
-    public void errorMessageShouldBeDisplayed() {
-       Assert.assertTrue( page.error.isDisplayed());
-    }
-
-    @When("User enters a blank username")
-    public void userEntersABlankUsername() {
-        page.username.sendKeys("");
-    }
-
-    @And("User enters a blank password")
-    public void userEntersABlankPassword() {
-        page.password.sendKeys("");
-    }
-
     @Then("{string} message should be displayed")
-    public void messageShouldBeDisplayed(String message) {
-        page.errorMessage(message);
+    public void message_should_be_displayed(String message) {
+        login.errorMessage(message);
+
     }
 
-    @Then("{string} message should be displaye")
-    public void messageShouldBeDisplaye(String message) {
-        page.errorMessage(message);
+    //__________________________EMPTY USER FIELD STEPS
+    @When("User enters valid password {string}")
+    public void user_enters_valid_password(String passwaord) {
+        login.password.sendKeys(passwaord);
     }
 
-    @Then("User should see {string} displayed on Products page and log out")
-    public void userShouldSeeDisplayedOnProductsPageAndLogOut(String product) {
-       actualTitle= home.productsTitle.getText();
-       Assert.assertEquals("Products",actualTitle);
-       home.logout();
+    //___________________________EMPTY PASSWORD FIELD STEPS
+    @When("User enters non-blank valid username {string}")
+    public void user_enters_non_blank_valid_username(String validUser) {
+        login.username.sendKeys(validUser);
+
     }
+
+    //_______________________DDT OUTLINE MULTIPLE LOGIN
+
+    @When("User enters valid userName {string}")
+    public void user_enters_valid_user_name(String validUSer) {
+        login.userLogin(validUSer);
+    }
+
+
+    @Then("User logs out")
+    public void userLogsOut() {
+        product.logout();
+    }
+
+
+
 }
