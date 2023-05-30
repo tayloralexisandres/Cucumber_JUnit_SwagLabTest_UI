@@ -1,14 +1,14 @@
-package swag.stepDefinitions;
+package com.swag.stepDefinitions;
 
+import com.swag.pages.SwagLoginlogin;
+import com.swag.pages.SwagProductlogin;
+import com.swag.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import swag.logins.SwagProductlogin;
-import swag.logins.SwagLoginlogin;
-import swag.utilities.Driver;
 
 import java.time.Duration;
 

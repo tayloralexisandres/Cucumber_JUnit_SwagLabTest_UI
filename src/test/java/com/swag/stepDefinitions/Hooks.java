@@ -1,13 +1,13 @@
-package swag.stepDefinitions;
+package com.swag.stepDefinitions;
 
 
+import com.swag.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import swag.utilities.ConfigReader;
-import swag.utilities.Driver;
+import com.swag.utilities.ConfigReader;
 
 public class Hooks {
 

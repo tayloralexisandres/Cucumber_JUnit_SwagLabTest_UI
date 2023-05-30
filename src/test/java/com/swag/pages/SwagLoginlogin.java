@@ -1,15 +1,16 @@
-package swag.logins;
+package com.swag.pages;
 
+import com.swag.utilities.Driver;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.loginFactory;
-import swag.utilities.Driver;
+import org.openqa.selenium.support.PageFactory;
+
 
 public class SwagLoginlogin {
 
     public SwagLoginlogin() {
-        loginFactory.initElements(Driver.getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "//input[@id='user-name']")

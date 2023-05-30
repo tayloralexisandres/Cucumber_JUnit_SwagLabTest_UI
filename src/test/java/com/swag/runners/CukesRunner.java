@@ -1,4 +1,4 @@
-package swag.runners;
+package com.swag.runners;
 
 
 import io.cucumber.junit.Cucumber;

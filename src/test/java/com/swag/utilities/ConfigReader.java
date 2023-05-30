@@ -1,4 +1,4 @@
-package swag.utilities;
+package com.swag.utilities;
 
 import java.io.FileInputStream;
 import java.io.IOException;
