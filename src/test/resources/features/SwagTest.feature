@@ -58,6 +58,19 @@ Feature: Login Functionality
     And User clicks on login button
     Then "Epic sadface: Password is required" message should be displayed
 
+  @uppercaseUsername
+  Scenario Outline: Case sensitivity
+    When User enters valid username uppercase "<username>"
+    And User enters valid password "<password>"
+    And User clicks on login button
+    Then "Epic sadface: Username and password do not match any user in this service" message should be displayed
+
+
+    Examples:
+      | username                | password     |
+      | STANDARD_USER           | secret_sauce |
+      | PROBLEM_USER            | secret_sauce |
+      | PERFORMANCE_GLITCH_USER | secret_sauce |
 
   @multipleUsers
   Scenario Outline: Validate all successful logins

@@ -28,7 +28,7 @@ public class SwagLoginStep_Def {
         login.userLogin(validuser);
     }
 
-    //_____________________________PRODUCTS TITLE TRUE ON PRODUCT login
+    //_____________________________PRODUCTS TITLE TRUE ON PRODUCT PAGE
     @Then("User should see {string} displayed on Products page")
     public void userShouldSeeDisplayedOnProductsPage(String products) {
         actualTitle=product.productsTitle.getText();
@@ -99,6 +99,12 @@ public void userEntersInvalidPasswordAndUsernameAndClicksLogin(String invalid) {
     public void user_enters_non_blank_valid_username(String validUser) {
         login.username.sendKeys(validUser);
 
+    }
+    //______________________UPPERCASE LOGIN DDT
+
+    @When("User enters valid username uppercase {string}")
+    public void userEntersValidUsernameUppercase(String upper) {
+        login.username.sendKeys(upper);
     }
 
     //_______________________DDT OUTLINE MULTIPLE LOGIN
