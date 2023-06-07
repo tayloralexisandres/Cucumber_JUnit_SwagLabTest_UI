@@ -1,5 +1,6 @@
 package com.swag.pages;
 
+import com.swag.utilities.BrowserUtils;
 import com.swag.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

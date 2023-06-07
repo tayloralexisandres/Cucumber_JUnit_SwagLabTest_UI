@@ -1,0 +1,2 @@
+[INFO ] [16276] [2023-06-06 18:17:39.674] [main] [com.swag.stepDefinitions.SwagLoginStep_Def] - "Navigating to https://www.saucedemo.com/"
+[INFO ] [16276] [2023-06-06 18:17:45.102] [main] [com.swag.stepDefinitions.SwagLoginStep_Def] - "User should see Products Title on Products page"

@@ -68,15 +68,30 @@ public class Driver {
                     break;
                 case "remote-chrome":
                     // assign your grid server address
-                    String gridAdress = "44.203.70.199"; // put your own Linux grid IP here
+                   String gridAdress = "54.85.44.234"; // put your own Linux grid IP here
                     try {
-                        URL url = new URL("http://"+gridAdress+":4444/wd/hub");
+                       URL url = new URL("http://"+gridAdress+":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
                         driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
                         driverPool.get().manage().window().maximize();
                         driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                     } catch (MalformedURLException e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case "remote-firefox":
+                    try {
+                        // assign your grid server address
+                       // String gridAddress = "3.218.244.38";
+                       // String gridAddress="44.203.70.199";
+                      //  URL url = new URL("https://"+ gridAddress + ":4444/wd/hub");
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        desiredCapabilities.setBrowserName("firefox");
+                        //driverPool.set(new RemoteWebDriver(url, desiredCapabilities));
+                        driverPool.set(new RemoteWebDriver(new URL("http://34.238.53.163:4444/wd/hub"),desiredCapabilities));
+
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                     break;

@@ -16,9 +16,9 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"},
         features = "src/test/resources/features",
         glue = "com/swag/stepDefinitions",
-        dryRun = true,
-        tags = "",
-        monochrome = false,
+        dryRun = false,
+        tags = "@swag",
+        monochrome = true,
         publish = true
 
 

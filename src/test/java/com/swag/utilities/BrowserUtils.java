@@ -149,6 +149,7 @@ public class BrowserUtils {
     public static void hover(WebElement element) {
         Actions actions = new Actions(Driver.getDriver());
         actions.moveToElement(element).perform();
+        actions.click().perform();
     }
 
     /**
